@@ -1,0 +1,42 @@
+﻿@model ShoppingCore.Entities.Orders
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Orders</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderModel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderModel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderDiscount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderDiscount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrderId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

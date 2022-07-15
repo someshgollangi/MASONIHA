@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ShoppingCore.Entities.Orders>
+
+@{
+    ViewBag.Title = "Index";
+}
+<body>
+    <h2>Items In Cart</h2>
+
+    <table cellpadding="2" class="table" cellspacing="2" border="1">
+        <tr class="btn-primary">
+            <th>
+                @Html.DisplayNameFor(model => model.OrderModel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderDiscount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderPrice)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr class="navbar-btn">
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderModel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDiscount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderPrice)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.OrderId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.OrderId })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <center>Total Price :@ViewBag.Total</center>
+    <center><button class="btn btn-success" type="button" onclick="location.href = '@Url.Action("Checkout",new { total = ViewBag.Total })';return false;">Proceed To Pay</button></center>
+
+
+
+</body>
+

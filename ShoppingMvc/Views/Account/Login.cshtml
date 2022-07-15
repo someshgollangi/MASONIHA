@@ -1,0 +1,32 @@
+﻿@model ShoppingCore.Entities.User_tbl
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+<link rel="stylesheet" href="~/Content/Logstyle.css" />
+<body align="center">
+    <div class="container">
+        <section id="content">
+            <form action="Login" method="post">
+                <h1>Login Form</h1>
+                <div>
+                    <input type="text" placeholder="Username" required="" id="username" name="username" />
+                </div>
+                <div>
+                    <input type="password" placeholder="Password" required="" id="password" name="password" /><br />
+                    <input type="checkbox" name="" value="Remember me" /><label>Remember me</label>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                </div>
+                <div>
+                    <input type="submit" value="Log in" />
+                    <a href="#">Lost your password?</a>
+                    @*<a href="#">Register</a>*@
+                    @Html.ActionLink("Register", "Register", "Account")
+                </div>
+            </form><!-- form -->
+        </section><!-- content -->
+    </div><!-- container -->
+</body>
+

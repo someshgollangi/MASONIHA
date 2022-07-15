@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background: radial-gradient(#fff,#ffd6d6);
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .column {
+            float: left;
+            width: 25%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+        }
+
+        .about-section {
+            padding: 20px;
+            text-align: center;
+            background-color: #ffd6d6;
+            color: black;
+        }
+
+        .container {
+            padding: 0 18px;
+        }
+
+            .container::after, .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+        .title {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="about-section">
+        <h2>About Us</h2>
+        <p>We are running this online shopping business for more than a decade .</p>
+        <p>Success isn't always about greatness.It's about Consistency.Consistent hard work gains Success.</p>
+    </div>
+
+    <h2 style="text-align:center;">Our Team</h2>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="https://i.pinimg.com/originals/63/93/55/63935580dca186a6817169baaa2a2b4d.jpg" alt="Somesh" style="width:100%;">
+                <div class="container">
+                    <h2>Somesh</h2>
+                    <p class="title">CEO & Founder</p>
+                    <p>Success isn't always about greatness.<br /> It's about Consistency.</p>
+                    <p>somesh@outlook.com</p>
+                    <a href="https://www.office.com/">
+                        <p class="button">Contact</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="https://i.pinimg.com/originals/3a/0c/9c/3a0c9c2041fbeed886b168ef945a585d.jpg" alt="Hari Chndan" style="width:100%">
+                <div class="container">
+                    <h2>Hari Chandan</h2>
+                    <p class="title">COO & Founder</p>
+                    <p>Some text that describes me. <br />Success isn't always about greatness.</p>
+                    <p>hari@outlook.com</p>
+                    <a href="https://www.office.com/">
+                        <p class="button">Contact</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="https://www.missionfemale.com/upstream-images/0/192/192/1b974cb3-6c77-4b73-9f10-1f6713cbd9e5.jpg" alt="Manju" style="width:100%">
+                <div class="container">
+                    <h2>Manju</h2>
+                    <p class="title">Technical Lead & Founder</p>
+                    <p>Some text that describes me .<br />It's about Consistency.</p>
+                    <p>manju@example.com</p>
+                    <a href="https://www.office.com/">
+                        <p class="button">Contact</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="~/Images/Layout/images.jfif" alt="Nithya" style="width:100%">
+                <div class="container">
+                    <h2>Nithya</h2>
+                    <p class="title">Chairman & Founder</p>
+                    <p>Some text that describes me <br />It's about Consistency.</p>
+                    <p>nithya@example.com</p>
+                    <a href="https://www.office.com/">
+                        <p class="button">Contact</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

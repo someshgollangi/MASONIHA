@@ -1,0 +1,65 @@
+﻿@model IEnumerable<ShoppingCore.Entities.SubCategories>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        p {
+            font-family: Arial;
+            color: #555;
+        }
+
+        .title {
+            text-align: center;
+            margin: 0 auto 70px;
+            position: relative;
+            line-height: 60px;
+            color: #555;
+        }
+
+        h4 {
+            color: #555;
+            font-weight: normal;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px 0;
+        }
+
+        .col-4 img {
+            width: 100%;
+        }
+
+        .rating .fa {
+            color: #ff523b;
+        }
+    </style>
+</head>
+<body>
+    @Html.ActionLink("<Previous", "Index", "Product")
+    @Html.ActionLink("ADD ITEM", "Index", "Product")
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <a href="@Url.Action("Details",new { id = item.ItemId })">
+                    <img src="@Url.Content(item.Iimage)" />
+                </a>
+                <h4>@item.ItemModel</h4>
+                <div class="rating">
+                    <i class="fa fa-star"> </i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"> </i>
+                    <i class="fa fa-star"> </i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>@item.ItemDiscount % off Rs:@item.ItemPrice</p>
+            </div>
+
+        }
+    </div>
+</body>

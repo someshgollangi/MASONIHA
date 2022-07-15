@@ -1,0 +1,72 @@
+﻿@model ShoppingCore.Entities.SubCategories
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@Html.ActionLink("<Previous", "Index", "Product")<h2>Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dd>
+            <a href="@Url.Action("Details",new { id = Model.ItemId })">
+                <img src="@Url.Content(Model.Iimage)" />
+            </a>
+        </dd>
+        @*<dt>
+                @Html.DisplayNameFor(model => model.Products_Tbl.Productname)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Products_Tbl.Productname)
+            </dd>
+             <dd>
+                @Html.DisplayFor(model => model.Iimage)
+            </dd>
+        *@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemModel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemModel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemDiscount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemDiscount)% off
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Specification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Specification)
+        </dd>
+
+        @*<dt>
+                @Html.DisplayNameFor(model => model.Iimage)
+            </dt>*@
+
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("AddToCart", "AddToCart", "Orders", new { id = Model.ItemId }, "")|
+    @Html.ActionLink("Back to List", "Index", "Product")
+</p>
